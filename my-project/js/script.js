@@ -11,3 +11,5 @@ toggle.addEventListener('click', () => {
 if (localStorage.getItem('theme') === 'dark') {
   html.classList.add('dark');
 }
+
+tailwind.config = { darkMode: 'class' }
