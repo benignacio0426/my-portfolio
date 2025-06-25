@@ -1,20 +1,13 @@
 // Theme Toggle
-const toggleButton = document.getElementById('theme-toggle');
-const body = document.body;
+const toggle = document.getElementById('theme-toggle');
+const html = document.documentElement;
 
-// Check saved theme
-if (localStorage.getItem('theme') === 'dark') {
-  body.classList.add('dark');
-}
-
-// On click toggle theme
-toggleButton.addEventListener('click', () => {
-  body.classList.toggle('dark');
-
-  // Save preference
-  if (body.classList.contains('dark')) {
-    localStorage.setItem('theme', 'dark');
-  } else {
-    localStorage.setItem('theme', 'light');
-  }
+toggle.addEventListener('click', () => {
+  html.classList.toggle('dark');
+  localStorage.setItem('theme', html.classList.contains('dark') ? 'dark' : 'light');
 });
+
+// Keep theme persistent on reload
+if (localStorage.getItem('theme') === 'dark') {
+  html.classList.add('dark');
+}
