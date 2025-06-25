@@ -1,15 +1,17 @@
-// Theme Toggle
+// Theme Toggle Script
 const toggle = document.getElementById('theme-toggle');
 const html = document.documentElement;
 
-toggle.addEventListener('click', () => {
-  html.classList.toggle('dark');
-  localStorage.setItem('theme', html.classList.contains('dark') ? 'dark' : 'light');
-});
-
-// Keep theme persistent on reload
+// Load theme from localStorage
 if (localStorage.getItem('theme') === 'dark') {
   html.classList.add('dark');
 }
 
-tailwind.config = { darkMode: 'class' }
+toggle.addEventListener('click', () => {
+  html.classList.toggle('dark');
+  if (html.classList.contains('dark')) {
+    localStorage.setItem('theme', 'dark');
+  } else {
+    localStorage.setItem('theme', 'light');
+  }
+});
