@@ -72,3 +72,16 @@ footer {
   background-color: #222;
   color: white;
 }
+
+.service-card {
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: 1rem;
+  transition: all 0.03s;
+}
+
+.service-card:hover {
+  transform: scale(1.05);
+  box-shadow: 00 20px rgba(0, 255, 213, 0.4);
+}
