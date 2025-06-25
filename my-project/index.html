@@ -10,17 +10,18 @@
   <script>
     tailwind.config = { 
       darkMode: 'class',
-    theme: {
-      extend: {
-        colors: {
-          primary: '#00ffd5',
+      theme: {
+        extend: {
+          colors: {
+            primary: '#00b36b',
+            primaryHover: '#00cc7a',
+          }
         }
       }
-    }
-   };
+    };
   </script>
 
-  <!-- Google Fonts (Optional) -->
+  <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
 
   <!-- Favicon -->
@@ -37,13 +38,13 @@
 
   <!-- Header -->
   <header class="flex items-center justify-between max-w-7xl mx-auto p-6">
-    <h1 class="text-2xl font-bold text-[#00ffd5]">Ben Ignacio</h1>
+    <h1 class="text-2xl font-bold text-primary">Ben Ignacio</h1>
     <nav class="hidden md:flex space-x-6 text-sm text-gray-400">
-      <a href="#about" class="hover:text-[#00ffd5]">About</a>
-      <a href="#services" class="hover:text-[#00ffd5]">Services</a>
-      <a href="mailto:youremail@gmail.com" class="hover:text-[#00ffd5]">Contact</a>
+      <a href="#about" class="hover:text-primary">About</a>
+      <a href="#services" class="hover:text-primary">Services</a>
+      <a href="mailto:youremail@gmail.com" class="hover:text-primary">Contact</a>
     </nav>
-    <button id="theme-toggle" class="border border-[#00ffd5] px-4 py-2 rounded-full hover:bg-[#00ffd5] hover:text-black transition">
+    <button id="theme-toggle" class="border border-primary px-4 py-2 rounded-full hover:bg-primary hover:text-black transition">
       🌙 Toggle Theme
     </button>
   </header>
@@ -53,43 +54,43 @@
 
     <!-- Profile Section -->
     <section class="text-center mt-10">
-      <img src="images/profilepic.jpg" alt="Profile Photo" class="w-32 h-32 rounded-full mx-auto border-4 border-[#00ffd5] shadow-lg mb-4">
+      <img src="images/profilepic.jpg" alt="Profile Photo" class="w-32 h-32 rounded-full mx-auto border-4 border-primary shadow-lg mb-4">
       <h2 class="text-4xl font-bold">Hi, I'm Ben 👋</h2>
       <p class="text-lg mt-2 text-gray-400">Web Developer | System Analyst | UI/UX Designer</p>
     </section>
 
     <!-- About Section -->
     <section id="about" class="mt-20">
-      <h3 class="text-2xl font-semibold text-[#00ffd5] mb-4">📖 About Me</h3>
+      <h3 class="text-2xl font-semibold text-primary mb-4">📖 About Me</h3>
       <p class="text-gray-300 leading-relaxed">
-        Hello! I'm <span class="text-[#00ffd5] font-medium">Ben Ignacio</span>, a passionate Web Developer and System Analyst. 
+        Hello! I'm <span class="text-primary font-medium">Ben Ignacio</span>, a passionate Web Developer and System Analyst. 
         I enjoy creating beautiful websites and solving problems with code. My goal is to build user-friendly, responsive, and visually appealing websites that make a difference.
       </p>
     </section>
 
     <!-- Services Section -->
     <section id="services" class="mt-20">
-      <h3 class="text-2xl font-semibold text-[#00ffd5] mb-8">💼 What I Do</h3>
+      <h3 class="text-2xl font-semibold text-primary mb-8">💼 What I Do</h3>
 
       <div class="grid gap-6 sm:grid-cols-2 md:grid-cols-3">
         <!-- Card 1 -->
         <div class="bg-white/5 border border-white/10 p-6 rounded-xl hover:scale-105 hover:shadow-xl transition">
           <img src="images/web-dev.png" alt="Web Development" class="w-12 mb-4">
-          <h4 class="text-xl font-semibold text-[#00ffd5]">Web Development</h4>
+          <h4 class="text-xl font-semibold text-primary">Web Development</h4>
           <p class="text-gray-300 mt-2 text-sm">Building responsive websites using HTML, CSS, JS, and frameworks.</p>
         </div>
 
         <!-- Card 2 -->
         <div class="bg-white/5 border border-white/10 p-6 rounded-xl hover:scale-105 hover:shadow-xl transition">
           <img src="images/ui-design.png" alt="UI Design" class="w-12 mb-4">
-          <h4 class="text-xl font-semibold text-[#00ffd5]">UI/UX Design</h4>
+          <h4 class="text-xl font-semibold text-primary">UI/UX Design</h4>
           <p class="text-gray-300 mt-2 text-sm">Designing clean and modern interfaces for web and mobile apps.</p>
         </div>
 
         <!-- Card 3 -->
         <div class="bg-white/5 border border-white/10 p-6 rounded-xl hover:scale-105 hover:shadow-xl transition">
           <img src="images/system-analysis.png" alt="System Analysis" class="w-12 mb-4">
-          <h4 class="text-xl font-semibold text-[#00ffd5]">System Analysis</h4>
+          <h4 class="text-xl font-semibold text-primary">System Analysis</h4>
           <p class="text-gray-300 mt-2 text-sm">Analyzing, planning, and documenting system processes and workflows.</p>
         </div>
       </div>
