@@ -25,7 +25,7 @@ AOS.init({
 //Toast Notification After Form Submit
 const form = document.querySelector('form');
 if (form) {
-  const toast = document.elementFromPoint('div');
+  const toast = document.createElement('div');
   toast.className =
     'fixed bottom-8 right-8 bg-green-600 text-white px-4 py-2 rounded-lg shadow-lg hidden z-50';
   toast.innerText = '✅ Message Sent Successfully!';
