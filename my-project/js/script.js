@@ -80,3 +80,12 @@ backToTopBtn.addEventListener("click", function() {
 window.addEventListener('load', () => {
   document.body.classList.remove('opacity-0', 'translate-y-5');
 });
+
+// Modal Button
+function openModal(id) {
+  document.getElementById(id + '-modal').classList.remove('hidden');
+}
+
+function closeModal(id) {
+  document.getElementById(id + '-modal').classList.add('hidden');
+}
