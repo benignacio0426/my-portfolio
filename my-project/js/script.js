@@ -75,3 +75,8 @@ backToTopBtn.addEventListener("click", function() {
     behavior: "smooth",
   });
 });
+
+// Page Load Animation
+window.addEventListener('load', () => {
+  document.body.classList.remove('opacity-0', 'translate-y-5');
+});
