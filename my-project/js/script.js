@@ -1,18 +1,22 @@
 // Theme Toggle Script
-const toggle = document.getElementById('theme-toggle');
-const html = document.documentElement;
+const themetoggle = document.getElementById('theme-toggle');
+const htmlElement = document.documentElement;
 
 // Load theme from localStorage
 if (localStorage.getItem('theme') === 'dark') {
-  html.classList.add('dark');
+  htmlElement.classList.add('dark');
+} else {
+  htmlElement.classList.remove('dark');
 }
 
-toggle.addEventListener('click', () => {
-  html.classList.toggle('dark');
-  if (html.classList.contains('dark')) {
-    localStorage.setItem('theme', 'dark');
-  } else {
+// Toggle theme on button click
+themetoggletoggle.addEventListener('click', () => {
+  if (htmlElement.classList.contains('dark')) {
+    htmlElement.classList.remove('dark');
     localStorage.setItem('theme', 'light');
+  } else {
+    htmlElement.classList.add('dark');
+    localStorage.setItem('theme', 'dark');
   }
 });
 
