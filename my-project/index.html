@@ -47,7 +47,7 @@
       <a href="#about" class="hover:text-primary">About</a>
       <a href="#services" class="hover:text-primary">Services</a>
       <a href="#certifications" class="hover:text-primary">Certifications</a>
-      <a href="mailto:youremail@gmail.com" class="hover:text-primary">Contact</a>
+      <a href="#contact" class="hover:text-primary">Contact</a>
     </nav>
     <button id="theme-toggle" class="border border-primary px-4 py-2 rounded-full hover:bg-primary hover:text-black transition">
       🌙 Toggle Theme
@@ -128,10 +128,42 @@
         </div>
       </div>
     </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="max-w-7xl mx-auto mt-20 px-6 mb-20">
+      <h3 class="text-2xl font-semibold text-primary mb-4">📩 Get in Touch</h3>
+      <p class="text-gray-300 mb-6">I'm open to freelance projects, collaborations, or any questions. Drop me a message!</p>
+
+      <form action="https://formspree.io/f/xnnvolbp" method="POST" class="space-y-4">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <input type="text" name="name" placeholder="Your Name" required
+            class="w-full p-3 bg-gray-800 border border-gray-600 rounded-xl text-white placeholder-gray-400">
+          <input type="email" name="email" placeholder="Your Email" required 
+            class="w-full p-3 bg-gray-800 border border-gray-600 rounded-xl text-white placeholder-gray-400">
+        </div>
+
+        <textarea name="message" rows="5" placeholder="Your Message" required 
+          class="w-full p-3 bg-gray-800 border border-gray-600 rounded-xl text-white placeholder-gray-400"></textarea>
+
+        <button type="submit"
+          class="px-6 py-3 bg-primary hover:bg-primaryHover text-black font-semibold rounded-xl transition hover:scale-105">Send Message 🚀</button>
+      </form>
+    </section>
   </main>
 
   <!-- Footer -->
   <footer class="text-center text-gray-500 text-sm py-6 border-t border-gray-700 mt-20">
+    <div class="flex justify-center gap-6 mb-3">
+      <a href="https://github.com/benignacio0426" target="_blank" class="hover:text-primary">
+        <i class="fab fa-github"></i> GitHub
+      </a>
+      <a href="mailto:benignacio0426@gmail.com" class="hover:text-primary">
+        <i class="fas fa-envelope"></i> Email
+      </a>
+      <a href="https://facebook.com/profile.php?id=61562975307588" target="_blank" class="hover:text-primary">
+        <i class="fab fa-facebook"></i> Facebook
+      </a>
+    </div>
     &copy; 2025 Ben Ignacio. All rights reserved.
   </footer>
 
