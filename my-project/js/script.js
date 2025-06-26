@@ -10,7 +10,7 @@ if (localStorage.getItem('theme') === 'dark') {
 }
 
 // Toggle theme on button click
-themetoggletoggle.addEventListener('click', () => {
+themetoggle.addEventListener('click', () => {
   if (htmlElement.classList.contains('dark')) {
     htmlElement.classList.remove('dark');
     localStorage.setItem('theme', 'light');
