@@ -15,7 +15,10 @@
           colors: {
             primary: '#00b36b',
             primaryHover: '#00cc7a',
-            background: '#0f0f0f'
+            background: '#0f0f0f',
+          },
+          animation: {
+            'spin-slow': 'spin 2s linear infinite',
           }
         }
       }
@@ -58,9 +61,24 @@
   </header>
 
   <!-- Preloader -->
-  <div id="preloader" class="fixed inset-0 bg-background flex items-center justify-center z-[9999]">
-    <div class="loader border-4 border-primary border-t-transparent rounded-full w-16 h-16 animate-spin"></div>
-  </div>
+  <div id="preloader" class="fixed inset-0 bg-background flex flex-col items-center justify-center z-[9999]">
+
+    <!-- Logo Spinner -->
+    <img src="images/profilepic.jpg" alt="Logo" class="w-20 h-20 rounded-full animate-spin-slow mb-6 border-4 border-primary">
+
+    <!-- Animated Loading Text -->
+    <div class="flex space-x-1 text-primary text-lg font-semibold">
+      <span class="animate-bounce">L</span>
+      <span class="animate-bounce [animation-delay:0.1s]">o</span>
+      <span class="animate-bounce [animation-delay:0.2s]">a</span>
+      <span class="animate-bounce [animation-delay:0.3s]">d</span>
+      <span class="animate-bounce [animation-delay:0.4s]">i</span>
+      <span class="animate-bounce [animation-delay:0.5s]">n</span>
+      <span class="animate-bounce [animation-delay:0.6s]">g</span>
+      <span class="animate-bounce [animation-delay:0.7s]">.</span>
+      <span class="animate-bounce [animation-delay:0.8s]">.</span>
+      <span class="animate-bounce [animation-delay:0.9s]">.</span>
+    </div>
 
   <!-- Main -->
   <main class="max-w-7xl mx-auto px-6">
