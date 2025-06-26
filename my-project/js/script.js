@@ -15,3 +15,9 @@ toggle.addEventListener('click', () => {
     localStorage.setItem('theme', 'light');
   }
 });
+
+// AOS Animation Initialization
+AOS.init({
+  duration: 1000, // Animation speed in ms
+  once: true // Run animations only per element
+});
