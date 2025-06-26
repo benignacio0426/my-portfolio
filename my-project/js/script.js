@@ -41,3 +41,23 @@ if (form) {
     }, 500);
   });
 }
+
+// Get the button
+const backToTopBtn = document.getElementById("backToTopBtn");
+
+// Show button when scrolling down 300px
+window.onscroll = function() {
+  if(document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+    backToTopBtn.classList.remove("hidden");
+  } else {
+    backToTopBtn.classList.add("hidden");
+  }
+};
+
+// Scroll to top when button is clicked
+backToTopBtn.addEventListener("click", function() {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  });
+});
