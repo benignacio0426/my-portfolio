@@ -5,6 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ben Ignacio - Portfolio</title>
 
+  <!-- Alpine.js -->
+  <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+
   <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
@@ -279,7 +282,7 @@
     </section>
 
     <!-- Projects Section -->
-    <section id="projects" class="mt-20">
+    <section id="projects" class="mt-20" x-data="modalHandler">
       <h3 class="text-2xl font-semibold text-primary mb-8">🚀 My Projects</h3>
       
       <div class="grid gap-6 sm:grid-cols-2 md:grid-cols-3">
@@ -295,7 +298,7 @@
             <a href="#" target="_blank" class="px-4 py-2 bg-primary text-black rounded hover:bg-primaryHover transition">
               Live Preview
             </a>
-            <button onclick="openModal('project1')" class="px-4 py-2 bg-primary text-black rounded hover:bg-primaryHover transition">
+            <button @click="openModal('project1')" class="px-4 py-2 bg-primary text-black rounded hover:bg-primaryHover transition">
               View Details
             </button>
           </div>
@@ -312,7 +315,7 @@
             <a href="#" target="_blank" class="px-4 py-2 bg-primary text-black rounded hover:bg-primaryHover transition">
               Live Preview
             </a>
-            <button onclick="openModal('project2')" class="px-4 py-2 bg-primary text-black rounded hover:bg-primaryHover transition">
+            <button @click="openModal('project2')" class="px-4 py-2 bg-primary text-black rounded hover:bg-primaryHover transition">
               View Details
             </button>
           </div>
@@ -329,7 +332,7 @@
             <a href="#" target="_blank" class="px-4 py-2 bg-primary text-black rounded hover:bg-primaryHover transition">
               Live Preview
             </a>
-            <button onclick="openModal('project3')" class="px-4 py-2 bg-primary text-black rounded hover:bg-primaryHover transition">
+            <button @click="openModal('project3')" class="px-4 py-2 bg-primary text-black rounded hover:bg-primaryHover transition">
               View Details
             </button>
           </div>
@@ -340,44 +343,49 @@
     <!-- Popup Modals -->
 
     <!-- Project 1 Modal -->
-    <div id="project1-modal" class="fixed inset-0 bg-black/70 backdrop-blur-sm flex items-center justify-center z-[9999] hidden">
-      <div class="bg-background p-6 rounded-xl max-w-lg w-full">
-        <h4 class="text-xl font-semibold text-primary mb-4">Portfolio Website</h4>
-        <p class="text-gray-300 mb-4">
-          This is a detailed description of my portfolio website, showcasing my skills in HTML, Tailwind CSS, and JavaScript.
-        </p>
-        <button onclick="closeModal('project1')" class="mt-4 px-4 py-2 bg-primary hover:bg-primaryHover text-black rounded transition">
-          Close
-        </button>
+    <template x-if="activeModal === 'project1'">
+      <div class="fixed inset-0 bg-black/70 backdrop-blur-sm flex items-center justify-center z-[9999]">
+        <div class="bg-background p-6 rounded-xl max-w-lg w-full">
+          <h4 class="text-xl font-semibold text-primary mb-4">Portfolio Website</h4>
+          <p class="text-gray-300 mb-4">
+            This is a detailed description of my portfolio website, showcasing my skills in HTML, Tailwind CSS, and JavaScript.
+          </p>
+          <button @click="closeModal()" class="mt-4 px-4 py-2 bg-primary hover:bg-primaryHover text-black rounded transition">
+            Close
+          </button>
+        </div>
       </div>
-    </div>
+    </template>
 
     <!-- Project 2 Modal -->
-    <div id="project2-modal" class="fixed inset-0 bg-black/70 backdrop-blur-sm flex items-center justify-center z-[9999] hidden">
-      <div class="bg-background p-6 rounded-xl max-w-lg w-full">
-        <h4 class="text-xl font-semibold text-primary mb-4">Inventory System</h4>
-        <p class="text-gray-300 mb-4">
-          A comprehensive inventory management system that includes CRUD operations, responsive dashboard, and data visualization. Built for small businesses and fully optimized.
-        </p>
-        <button onclick="closeModal('project2')" class="mt-4 px-4 py-2 bg-primary hover:bg-primaryHover text-black rounded transition">
-          Close
-        </button>
+    <template x-if="activeModal === 'project2'">
+      <div class="fixed inset-0 bg-black/70 backdrop-blur-sm flex items-center justify-center z-[9999]">
+        <div class="bg-background p-6 rounded-xl max-w-lg w-full">
+          <h4 class="text-xl font-semibold text-primary mb-4">Inventory System</h4>
+          <p class="text-gray-300 mb-4">
+            A comprehensive inventory management system with CRUD operations, a responsive dashboard, and data visualization.
+          </p>
+          <button @click="closeModal()" class="mt-4 px-4 py-2 bg-primary hover:bg-primaryHover text-black rounded transition">
+            Close
+          </button>
+        </div>
       </div>
-    </div>
+    </template>
 
     <!-- Project 3 Modal -->
-    <div id="project3-modal" class="fixed inset-0 bg-black/70 backdrop-blur-sm flex items-center justify-center z-[9999] hidden">
-      <div class="bg-background p-6 rounded-xl max-w-lg w-full">
-        <h4 class="text-xl font-semibold text-primary mb-4">Landing Page</h4>
-        <p class="text-gray-300 mb-4">
-          A modern, clean, and fully responsive landing page designed for businesses. It features smooth scroll animations, a focus on conversions, and mobile-first design.
-        </p>
-        <button onclick="closeModal('project3')"
-          class="mt-4 px-4 py-2 bg-primary hover:bg-primaryHover text-black rounded transition">
+    <template x-if="activeModal === 'project3'">
+      <div class="fixed inset-0 bg-black/70 backdrop-blur-sm flex items-center justify-center z-[9999]">
+        <div class="bg-background p-6 rounded-xl max-w-lg w-full">
+          <h4 class="text-xl font-semibold text-primary mb-4">Landing Page</h4>
+          <p class="text-gray-300 mb-4">
+            A modern, clean, and fully responsive landing page designed for businesses.
+          </p>
+          <button @click="closeModal()" class="mt-4 px-4 py-2 bg-primary hover:bg-primaryHover text-black rounded transition">
             Close
-        </button>
+          </button>
+        </div>
       </div>
-    </div> 
+    </template> 
 
     <!-- Contact Section -->
     <section id="contact" class="max-w-7xl mx-auto mt-20 px-6 mb-20">
@@ -449,5 +457,8 @@
 
   <!-- JavaScript -->
   <script src="js/script.js"></script>
+
+  <!-- Main JavaScript -->
+  <script src="js/main.js" defer></script>
 </body>
 </html>
